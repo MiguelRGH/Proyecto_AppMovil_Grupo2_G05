@@ -1,4 +1,4 @@
-# Proyecto_AppMovil_Grupo4_G05
+# Proyecto_AppMovil_Grupo2_G05
 
 Como parte del programa de salud de la Universidad Autónoma de Bucaramanga,
 se ha decidido realizar un tamizaje de peso y talla y el correspondiente cálculo del índice de masa corporal a cada persona de la comunidad universitaria,
