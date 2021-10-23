@@ -1,0 +1,15 @@
+  EQUIPO DE TRABAJO - GRUPO 2 - G05 - MISION TIC 2022
+  
+  NOMBRE DEL EQUIPO: OpenCode
+  
+  |----------------------------|-------------------|
+  |        INTEGRANTE          |       ROL         |
+  |----------------------------|-------------------|
+  | Luz Andrea Mendoza         |     Developer     |
+  |----------------------------|-------------------|
+  | Karen Ivonne Goavita       |   SCRUM Master    |
+  |----------------------------|-------------------|
+  | Fernando José Carrillo     |   Product owner   |
+  |----------------------------|-------------------|
+  | Miguel Ángel Rodríguez     |     Developer     |
+  |----------------------------|-------------------|
