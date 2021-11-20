@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoland1"
+    android:orientation="vertical"
+    >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.5"
+    android:orientation="vertical"
+    >
+
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        >
+
+   <LinearLayout
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="1"
+       android:orientation="horizontal">
+   </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnRegistrarme"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/univerisidad1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:text="Registrarme"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:cornerRadius="200dp" />
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
+        android:padding="5dp"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:textColor="@color/univerisidad1"
+        android:textSize="25sp"
+        app:cornerRadius="200dp" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

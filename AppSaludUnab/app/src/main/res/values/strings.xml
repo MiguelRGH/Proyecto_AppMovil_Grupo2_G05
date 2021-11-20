@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AppSaludUnab</string>
+    <string name="male">Masculino</string>
+    <string name="female">Femenino</string>
+    <string name="gender">Género</string>
+    <string name="name">Nombre:</string>
+    <string name="name_hint">Escriba su nombre</string>
+    <string name="last_name">Apellido:</string>
+    <string name="last_name_hint">Escriba su apellido</string>
+    <string name="id">ID:</string>
+    <string name="id_hint">Número de identificación</string>
+    <string name="email">Email:</string>
+    <string name="email_hint">correo@unab.edu.co</string>
+    <string name="password">Clave:</string>
+    <string name="password_hint">Escriba su clave</string>
+    <string name="U_logo">Logo UNAB</string>
+    <string name="send">Enviar</string>
+    <string name="login">INICIAR SESIÓN</string>
+    <string name="register">Registrarme</string>
+
+</resources>

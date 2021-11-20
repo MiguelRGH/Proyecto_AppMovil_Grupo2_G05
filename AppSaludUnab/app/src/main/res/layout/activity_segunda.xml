@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondo2"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="2.5"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:background="@drawable/stylo_borde_izq"
+                android:backgroundTint="@color/univerisidad1"
+                android:gravity="center"
+                android:text="ID"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                 />
+
+
+            <EditText
+                android:id="@+id/etUserIdentificacion"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:background="@drawable/stylo_borde_derecho"
+
+                android:ems="10"
+                android:hint=" Numero de identificación"
+                android:inputType="number"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:textColor="@color/univerisidad1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:background="@drawable/stylo_borde_izq"
+                android:backgroundTint="@color/univerisidad1"
+                android:gravity="center"
+                android:text="CLAVE"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                />
+
+
+            <EditText
+                android:id="@+id/etUserClave"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:background="@drawable/stylo_borde_derecho"
+
+                android:ems="10"
+                android:hint=" Escriba su clave"
+                android:inputType="number"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:textColor="@color/univerisidad1" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnInicioSesion2"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="#FFFFFF"
+            android:gravity="center"
+            android:padding="5dp"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:text="Iniciar sesión"
+            android:textAllCaps="false"
+            android:textColor="@color/univerisidad1"
+            android:textSize="25sp"
+            app:cornerRadius="200dp" />
+
+    </LinearLayout>
+</LinearLayout>

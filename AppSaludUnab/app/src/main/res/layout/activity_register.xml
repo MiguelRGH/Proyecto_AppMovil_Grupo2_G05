@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/fondo4"
+            android:contentDescription="@string/U_logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_izq"
+            android:backgroundTint="@color/univerisidad1"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/stylo_borde_derecho"
+            android:ems="10"
+            android:hint="@string/name_hint"
+            android:inputType="textPersonName"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:textColor="@color/univerisidad1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_izq"
+            android:backgroundTint="@color/univerisidad1"
+            android:gravity="center"
+            android:text="@string/last_name"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_derecho"
+            android:ems="10"
+            android:hint="@string/last_name_hint"
+            android:inputType="textPersonName"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:textColor="@color/univerisidad1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_izq"
+            android:backgroundTint="@color/univerisidad1"
+            android:gravity="center"
+            android:text="@string/id"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_derecho"
+            android:ems="10"
+            android:hint="@string/id_hint"
+            android:inputType="number"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:textColor="@color/univerisidad1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_izq"
+            android:backgroundTint="@color/univerisidad1"
+            android:gravity="center"
+            android:text="@string/email"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_derecho"
+            android:ems="10"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:textColor="@color/univerisidad1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_izq"
+            android:backgroundTint="@color/univerisidad1"
+            android:gravity="center"
+            android:text="@string/password"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/stylo_borde_derecho"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:textColor="@color/univerisidad1" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/univerisidadClaro"
+        android:gravity="center"
+        android:padding="1dp"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textColor="@color/univerisidad1"
+        android:textSize="25sp"
+        app:cornerRadius="200dp" />
+
+</LinearLayout>
