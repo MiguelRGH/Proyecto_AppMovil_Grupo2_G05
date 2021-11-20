@@ -16,7 +16,7 @@
             android:name=".CalculateImc"
             android:exported="false" />
         <activity
-            android:name=".SegundaActivity"
+            android:name=".login_activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

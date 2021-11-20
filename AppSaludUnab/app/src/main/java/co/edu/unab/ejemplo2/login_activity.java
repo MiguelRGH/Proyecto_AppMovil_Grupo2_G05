@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import co.edu.unab.ejemplo2.model.Person;
 
-public class SegundaActivity extends AppCompatActivity {
+public class login_activity extends AppCompatActivity {
 
     private ArrayList<Person> personArray = new ArrayList<Person>();
     boolean usuarioNoExiste = false;
@@ -25,18 +25,13 @@ public class SegundaActivity extends AppCompatActivity {
 
         EditText idUsuario = (EditText) findViewById(R.id.etUserIdentificacion);
         EditText ClaveUsuario = (EditText) findViewById(R.id.etUserClave);
-
         Button botonInicio = (Button) findViewById(R.id.btnInicioSesion2);
         Bundle recibeDatos = getIntent().getExtras();
-
-        //Person persona1 = null;
 
         if (recibeDatos != null) {
             personArray = (ArrayList<Person>) recibeDatos.getSerializable("lista");
             boolean usuarioNoExiste = false;
-
         }
-
 
         botonInicio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,17 +41,14 @@ public class SegundaActivity extends AppCompatActivity {
 
                 int tamañoLista = personArray.size();
                 if (tamañoLista == 0) {
-                    Toast.makeText(SegundaActivity.this, "No hay usuarios registrados. \nPor favor registrarse", Toast.LENGTH_LONG).show();
+                    Toast.makeText(login_activity.this, "No hay usuarios registrados. \nPor favor registrarse", Toast.LENGTH_LONG).show();
                 }
 
-
                 for (int i = 0; i < tamañoLista; i++) {
-
                     if (personArray.get(i).getId().equals(idUsuarioRecibido)) {
-
                         if (personArray.get(i).getPassword().equals(ClaveUsuarioRecibido)) {
                             usuarioNoExiste = false;
-                            Intent intent2 = new Intent(SegundaActivity.this, CalculateImc.class);
+                            Intent intent2 = new Intent(login_activity.this, CalculateImc.class);
                             Bundle bundle = new Bundle();
                             bundle.putSerializable("lista", personArray);
                             bundle.putInt("position", i);
@@ -65,24 +57,18 @@ public class SegundaActivity extends AppCompatActivity {
                             finish();
                             break;
                         } else {
-                            Toast.makeText(SegundaActivity.this, "Clave Incorrecta, vuelva a intentarlo", Toast.LENGTH_LONG).show();
+                            Toast.makeText(login_activity.this, "Clave Incorrecta, vuelva a intentarlo", Toast.LENGTH_LONG).show();
                             usuarioNoExiste = false;
                             break;
                         }
-
                     } else {
                         usuarioNoExiste = true;
                     }
-
                 }
                 if (usuarioNoExiste == true) {
-                    Toast.makeText(SegundaActivity.this, "Usuario No registrado. \nPor favor registrese", Toast.LENGTH_LONG).show();
+                    Toast.makeText(login_activity.this, "Usuario No registrado. \nPor favor registrese", Toast.LENGTH_LONG).show();
                 }
-
-
             }
         });
-
-
     }
 }

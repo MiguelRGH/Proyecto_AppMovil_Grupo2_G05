@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String passwordPerson = password.getText().toString();
                 personArray.add(new Person(namePerson, lastNamePerson, idPerson, emailPerson, passwordPerson));
                 Toast.makeText(RegisterActivity.this, "Registro correcto", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(RegisterActivity.this, SegundaActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, login_activity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("lista", personArray);
                 intent.putExtras(bundle);
