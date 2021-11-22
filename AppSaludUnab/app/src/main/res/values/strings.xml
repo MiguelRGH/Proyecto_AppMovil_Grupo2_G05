@@ -16,6 +16,5 @@
     <string name="U_logo">Logo UNAB</string>
     <string name="send">Enviar</string>
     <string name="login">INICIAR SESIÓN</string>
-    <string name="register">Registrarme</string>
-
+    <string name="register">Registrate</string>
 </resources>
