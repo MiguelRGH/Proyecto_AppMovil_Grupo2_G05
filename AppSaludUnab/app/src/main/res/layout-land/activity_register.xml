@@ -23,7 +23,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="490dp"
                 android:background="@drawable/fondo5"
-                android:contentDescription="@string/U_logo"/>
+                android:contentDescription="@string/U_logo"
+                tools:ignore="ImageContrastCheck" />
 
         </LinearLayout>
 
@@ -50,7 +51,8 @@
                     android:gravity="center"
                     android:text="@string/name"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/etName"
@@ -61,9 +63,11 @@
                     android:background="@drawable/stylo_borde_derecho"
                     android:ems="10"
                     android:hint="@string/name_hint"
+                    android:importantForAutofill="no"
                     android:inputType="textPersonName"
                     android:shadowRadius="@integer/material_motion_duration_long_1"
-                    android:textColor="@color/univerisidad1" />
+                    android:textColor="@color/univerisidad1"
+                    tools:ignore="TextContrastCheck" />
 
             </LinearLayout>
 
@@ -84,7 +88,8 @@
                     android:gravity="center"
                     android:text="@string/last_name"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/etLastName"
@@ -97,7 +102,9 @@
                     android:hint="@string/last_name_hint"
                     android:inputType="textPersonName"
                     android:shadowRadius="@integer/material_motion_duration_long_1"
-                    android:textColor="@color/univerisidad1" />
+                    android:textColor="@color/univerisidad1"
+                    tools:ignore="TextContrastCheck"
+                    android:importantForAutofill="no" />
 
             </LinearLayout>
 
@@ -118,7 +125,8 @@
                     android:gravity="center"
                     android:text="@string/id"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/etId"
@@ -131,7 +139,9 @@
                     android:hint="@string/id_hint"
                     android:inputType="number"
                     android:shadowRadius="@integer/material_motion_duration_long_1"
-                    android:textColor="@color/univerisidad1" />
+                    android:textColor="@color/univerisidad1"
+                    tools:ignore="TextContrastCheck"
+                    android:importantForAutofill="no" />
 
             </LinearLayout>
 
@@ -152,7 +162,8 @@
                     android:gravity="center"
                     android:text="@string/email"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/etEmail"
@@ -165,7 +176,9 @@
                     android:hint="@string/email_hint"
                     android:inputType="textEmailAddress"
                     android:shadowRadius="@integer/material_motion_duration_long_1"
-                    android:textColor="@color/univerisidad1" />
+                    android:textColor="@color/univerisidad1"
+                    tools:ignore="TextContrastCheck"
+                    android:autofillHints="emailAddress" />
 
             </LinearLayout>
 
@@ -186,7 +199,8 @@
                     android:gravity="center"
                     android:text="@string/password"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="TextContrastCheck" />
 
                 <EditText
                     android:id="@+id/etPassword"
@@ -199,7 +213,9 @@
                     android:hint="@string/password_hint"
                     android:inputType="textPassword"
                     android:shadowRadius="@integer/material_motion_duration_long_1"
-                    android:textColor="@color/univerisidad1" />
+                    android:textColor="@color/univerisidad1"
+                    tools:ignore="TextContrastCheck"
+                    android:importantForAutofill="no" />
 
             </LinearLayout>
 
@@ -218,7 +234,8 @@
                 android:textAllCaps="false"
                 android:textColor="@color/univerisidad1"
                 android:textSize="25sp"
-                app:cornerRadius="200dp" />
+                app:cornerRadius="200dp"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 

@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0sp"
+        android:layout_height="0dp"
         android:layout_weight="2.5"
         android:orientation="vertical">
 
@@ -38,11 +38,10 @@
                 android:background="@drawable/stylo_borde_izq"
                 android:backgroundTint="@color/univerisidad1"
                 android:gravity="center"
-                android:text="ID"
-                android:textSize="20dp"
+                android:text="@string/id"
                 android:textColor="@color/white"
-                 />
-
+                android:textSize="20sp"
+                tools:ignore="TextContrastCheck" />
 
             <EditText
                 android:id="@+id/etUserIdentificacion"
@@ -51,17 +50,19 @@
                 android:layout_gravity="center"
                 android:layout_margin="0dp"
                 android:background="@drawable/stylo_borde_derecho"
-
                 android:ems="10"
-                android:hint=" Numero de identificación"
+                android:hint="@string/id_hint"
                 android:inputType="number"
                 android:shadowRadius="@integer/material_motion_duration_long_1"
-                android:textColor="@color/univerisidad1" />
+                android:textColor="@color/univerisidad1"
+                tools:ignore="TextContrastCheck"
+                android:importantForAutofill="no" />
+
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="350dp"
             android:layout_height="80dp"
-
             android:layout_gravity="center"
             android:orientation="horizontal"
             >
@@ -74,10 +75,10 @@
                 android:background="@drawable/stylo_borde_izq"
                 android:backgroundTint="@color/univerisidad1"
                 android:gravity="center"
-                android:text="CLAVE"
-                android:textSize="20dp"
+                android:text="@string/password"
                 android:textColor="@color/white"
-                />
+                android:textSize="20sp"
+                tools:ignore="TextContrastCheck" />
 
 
             <EditText
@@ -87,12 +88,14 @@
                 android:layout_gravity="center"
                 android:layout_margin="0dp"
                 android:background="@drawable/stylo_borde_derecho"
-
                 android:ems="10"
-                android:hint=" Escriba su clave"
-                android:inputType="number"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
                 android:shadowRadius="@integer/material_motion_duration_long_1"
-                android:textColor="@color/univerisidad1" />
+                android:textColor="@color/univerisidad1"
+                tools:ignore="TextContrastCheck"
+                android:importantForAutofill="no" />
+
         </LinearLayout>
 
         <Button
@@ -105,11 +108,13 @@
             android:gravity="center"
             android:padding="5dp"
             android:shadowRadius="@integer/material_motion_duration_long_1"
-            android:text="Iniciar sesión"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/univerisidad1"
             android:textSize="25sp"
-            app:cornerRadius="200dp" />
+            app:cornerRadius="200dp"
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
+
 </LinearLayout>
