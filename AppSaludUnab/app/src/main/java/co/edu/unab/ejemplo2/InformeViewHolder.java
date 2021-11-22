@@ -17,8 +17,7 @@ public class InformeViewHolder extends RecyclerView.ViewHolder {
     private final TextView imc;
     private final TextView mb;
     private final TextView estadoSalud;
-    //private final EditText fecha;
-    //private final EditText numeroRegistros;
+
     private final TextView consecutivo;
     private final TextView fecha1;
     private final LinearLayout bandera;
@@ -36,7 +35,6 @@ public class InformeViewHolder extends RecyclerView.ViewHolder {
         imc = (TextView) itemView.findViewById(R.id.tvIMC1);
         mb = (TextView) itemView.findViewById(R.id.tvMB1);
         estadoSalud = (TextView) itemView.findViewById(R.id.tvEstado1);
-        //numeroRegistros = (EditText) itemView.findViewById(R.id.etNRegistro2);
         consecutivo = (TextView) itemView.findViewById(R.id.tvConsecutivo1);
         fecha1 = (TextView) itemView.findViewById(R.id.tvFecha1);
         bandera = (LinearLayout) itemView.findViewById(R.id.lybandera);
@@ -70,18 +68,7 @@ public class InformeViewHolder extends RecyclerView.ViewHolder {
     public TextView getEstadoSalud() {
         return estadoSalud;
     }
-/*
-    public EditText getNumeroRegistros() {
-        return numeroRegistros;
-    }
 
- */
-        /*
-        public TextView getFecha() {
-            return fecha;
-        }
-
-         */
 
     public TextView getConsecutivo() {
         return consecutivo;

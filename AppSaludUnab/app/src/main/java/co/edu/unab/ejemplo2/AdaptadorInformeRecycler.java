@@ -26,8 +26,6 @@ public class AdaptadorInformeRecycler extends RecyclerView.Adapter<InformeViewHo
         this.layoutSeleccionado = layoutSeleccionado;
         inflater = LayoutInflater.from(contexto);
 
-
-
     }
 
     @NonNull
@@ -67,28 +65,6 @@ public class AdaptadorInformeRecycler extends RecyclerView.Adapter<InformeViewHo
         });
 
 
-
-        /*
-        Integer posicionPersona = listaDatos.get(position).getId();
-
-
-        String altura = listaDatos.get(position).getAltura();
-
-        Float basal = listaDatos.get(position).getmBasal();
-
-
-        int tamañolista = listaDatos.size();
-
-        holder.getEdad().setText(edad);
-//      String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
-        holder.getFecha().setText(""+fecha);
-        holder.getPeso().setText(peso);
-        holder.getAltura().setText(altura);
-        holder.getImc().setText("" + imc);
-        holder.getMb().setText("" + basal);
-        holder.getEstadoSalud().setText("" + ((estadoSalud == 0) ? "Peso insuficiente" : (estadoSalud == 1) ? "Normal" : (estadoSalud == 2) ? "Sobrepeso" : "Obesidad"));
-        holder.getNumeroRegistros().setText("" + contador);
-        */
         holder.getEstadoSalud().setText("" + ((estadoSalud == 0) ? "Peso insuficiente" : (estadoSalud == 1) ? "Saludable" : (estadoSalud == 2) ? "Sobrepeso" : "Obesidad"));
 
         if (estadoSalud == 0)  holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_amarillo));
@@ -102,88 +78,10 @@ public class AdaptadorInformeRecycler extends RecyclerView.Adapter<InformeViewHo
 
     }
 
-
-
     @Override
     public int getItemCount() {
         return listaDatos.size();
     }
 
-    /*
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        private final EditText edad;
-        private final EditText peso;
-        private final EditText altura;
-        private final TextView imc;
-        private final EditText mb;
-        private final TextView estadoSalud;
-        private final EditText fecha;
-        private final EditText numeroRegistros;
-        private final TextView consecutivo;
-        private final TextView fecha1;
-        private final LinearLayout bandera;
 
-
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            edad = (EditText) itemView.findViewById(R.id.etEdad2);
-            fecha = (EditText) itemView.findViewById(R.id.etFecha2);
-            peso = (EditText) itemView.findViewById(R.id.etPeso2);
-            altura = (EditText) itemView.findViewById(R.id.etAltura2);
-            imc = (TextView) itemView.findViewById(R.id.tvIMC1);
-            mb = (EditText) itemView.findViewById(R.id.etMB2);
-            estadoSalud = (TextView) itemView.findViewById(R.id.tvEstado1);
-            numeroRegistros = (EditText) itemView.findViewById(R.id.etNRegistro2);
-            consecutivo = (TextView) itemView.findViewById(R.id.tvConsecutivo1);
-            fecha1 = (TextView) itemView.findViewById(R.id.tvFecha1);
-            bandera = (LinearLayout) itemView.findViewById(R.id.lybandera);
-
-
-            }
-
-        public EditText getEdad() {
-            return edad;
-        }
-
-        public EditText getPeso() {
-            return peso;
-        }
-
-        public EditText getAltura() {
-            return altura;
-        }
-
-        public TextView getImc() {
-            return imc;
-        }
-
-        public EditText getMb() {
-            return mb;
-        }
-
-        public TextView getEstadoSalud() {
-            return estadoSalud;
-        }
-
-        public EditText getNumeroRegistros() {return numeroRegistros;
-        }
-
-        public TextView getFecha() {
-            return fecha;
-        }
-
-        public TextView getConsecutivo() {
-            return consecutivo;
-        }
-
-        public TextView getFecha1() {
-            return fecha1;
-        }
-
-        public LinearLayout getBandera() {
-            return bandera;
-        }
-    }
-    */
 }

@@ -51,7 +51,7 @@ public class InformeActivity extends AppCompatActivity {
 
 
         for (int i= 0; i<registrosDePersonaEspecifica.size();i++) {
-            //int n = registrosDePersonaEspecifica.get(i).getId();
+
             registrosDePersonaEspecifica.removeIf (n -> (n.getId() != position));
 
         }
