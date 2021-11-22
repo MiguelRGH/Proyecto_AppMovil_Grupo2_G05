@@ -3,9 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/drawable/stylo_borde_total.xml" value="0.22" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout-land/activity_calculo_imc.xml" value="0.1" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout-land/activity_informe.xml" value="0.1" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout-land/activity_main.xml" value="0.18" />
         <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout-land/activity_register.xml" value="0.1728395061728395" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout-land/activity_segunda.xml" value="0.1728395061728395" />
         <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout/activity_calculo_imc.xml" value="0.20416666666666666" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout/activity_informe.xml" value="0.1" />
         <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout/activity_segunda.xml" value="0.1" />
+        <entry key="..\:/Fernando/MisionTIC 2022/Ciclo 4/GitHub/Proyecto_AppMovil_Grupo2_G05/AppSaludUnab/app/src/main/res/layout/layout_para_cada_item_del_recycle.xml" value="0.15" />
         <entry key="..\:/Users/Ancla Segura/AndroidStudioProjects/AppSaludUnab/app/src/main/res/drawable/stylo_borde_inferior.xml" value="0.2203125" />
         <entry key="..\:/Users/Ancla Segura/AndroidStudioProjects/AppSaludUnab/app/src/main/res/drawable/stylo_borde_superior.xml" value="0.2203125" />
         <entry key="..\:/Users/Ancla Segura/AndroidStudioProjects/AppSaludUnab/app/src/main/res/layout-land/activity_calculo_imc.xml" value="0.25" />

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformeActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INFORME DE REGISTROS"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/stylo_borde_total"
+            android:backgroundTint="@color/univerisidadClaro"
+            android:textColor="@color/univerisidad1"/>
+
+
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerId"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:gravity="center|top">
+        <Button
+            android:id="@+id/btnRegresarInforme"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/univerisidadClaro"
+            android:gravity="center"
+            android:padding="5dp"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:text="Regresar"
+            android:textAllCaps="false"
+            android:textColor="@color/univerisidad1"
+            android:textSize="25sp"
+            app:cornerRadius="200dp" />
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/univerisidadClaro"
+            android:gravity="center"
+            android:padding="5dp"
+            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:text="Salir"
+            android:textAllCaps="false"
+            android:textColor="@color/univerisidad1"
+            android:textSize="25sp"
+            app:cornerRadius="200dp" />
+    </LinearLayout>
+</LinearLayout>

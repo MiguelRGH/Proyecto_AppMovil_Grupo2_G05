@@ -391,7 +391,7 @@
             android:gravity="center"
             android:padding="1dp"
             android:shadowRadius="@integer/material_motion_duration_long_1"
-            android:text="Regresar"
+            android:text="Salir"
             android:textAllCaps="false"
             android:textColor="@color/univerisidad1"
             android:textSize="25sp"

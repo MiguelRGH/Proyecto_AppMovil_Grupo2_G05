@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="180dp"
+android:orientation="vertical"
+android:padding="8dp"
+android:gravity="center"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:background="@drawable/stylo_borde_total"
+    android:layout_margin="10dp"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/lybandera"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:orientation="vertical"
+        android:padding="5dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="1dp"
+
+
+        >
+
+        <TextView
+            android:id="@+id/tvEstado1"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Saludable"
+            android:textSize="15dp"
+            android:padding="0dp"
+
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/azul"
+
+            />
+
+        <TextView
+            android:id="@+id/tvConsecutivo1"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Registro No. 1"
+            android:textColor="@color/gris"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+
+
+        android:layout_gravity="bottom"
+        >
+
+        <ImageButton
+            android:id="@+id/ibtndown_arrow"
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/down_arrow_14"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="1dp"
+
+
+        >
+
+        <TextView
+            android:id="@+id/tvIMC1"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Tu IMC"
+            android:textSize="15dp"
+
+            android:paddingRight="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/azul"
+            android:gravity="right"
+
+            />
+
+        <TextView
+            android:id="@+id/tvFecha1"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="10/10/2021"
+            android:textColor="@color/gris"
+            android:textSize="12dp"
+            android:gravity="right"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/lySecundario"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:layout_weight="1"
+    android:background="@drawable/stylo_borde_total"
+    android:backgroundTint="@color/gris_claro"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    >
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="1dp"
+
+        >
+
+        <TextView
+            android:id="@+id/tvPeso1"
+            android:layout_width="110dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:text="Peso:"
+            android:textSize="15dp"
+            android:padding="1dp"
+
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/azul"
+
+            />
+
+        <TextView
+            android:id="@+id/tvMB1"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="M. Basal: "
+            android:textColor="@color/gris"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        >
+        <TextView
+            android:id="@+id/tvAltura1"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+
+            android:text="Altura: "
+            android:textSize="15dp"
+
+            android:paddingRight="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/azul"
+            android:gravity="center|right"
+
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="1dp"
+
+
+        >
+
+        <TextView
+            android:id="@+id/tvEdad1"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:text="Edad:"
+            android:textSize="15dp"
+
+            android:paddingRight="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/azul"
+            android:gravity="center|right"
+
+            />
+
+        <TextView
+            android:id="@+id/tvGenero1"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Masculino"
+            android:textColor="@color/gris"
+            android:textSize="12dp"
+            android:gravity="center|right"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</LinearLayout>

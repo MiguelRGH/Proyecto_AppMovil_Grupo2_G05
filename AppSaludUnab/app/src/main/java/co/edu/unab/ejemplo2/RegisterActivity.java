@@ -11,11 +11,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import co.edu.unab.ejemplo2.model.Informe;
 import co.edu.unab.ejemplo2.model.Person;
 
 public class RegisterActivity extends AppCompatActivity {
 
     private ArrayList<Person> personArray = new ArrayList<>();
+    private ArrayList<Informe> infoPeople = new ArrayList<Informe>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +33,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         Bundle receiveData = getIntent().getExtras();
 
-        if (receiveData != null) {
-            personArray = (ArrayList<Person>) receiveData.getSerializable("lista");
+        if(getIntent().getExtras().getSerializable("lista") != null){
+            personArray= (ArrayList<Person>) receiveData.getSerializable("lista");
+
+        }
+        if(getIntent().getExtras().getSerializable("informe") != null){
+            infoPeople= (ArrayList<Informe>) receiveData.getSerializable("informe");
+
         }
 
         save.setOnClickListener(new View.OnClickListener() {
@@ -48,8 +55,10 @@ public class RegisterActivity extends AppCompatActivity {
                 Intent intent = new Intent(RegisterActivity.this, login_activity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("lista", personArray);
+                bundle.putSerializable("informe", infoPeople);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -11,14 +11,20 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
+import co.edu.unab.ejemplo2.model.Informe;
 import co.edu.unab.ejemplo2.model.Person;
 
 public class CalculateImc extends AppCompatActivity {
 
     private ArrayList<Person> personArray = new ArrayList<>();
+    private ArrayList<Informe> infoPeople = new ArrayList<Informe>();
     private int position;
+    private boolean generoFemenino;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +45,17 @@ public class CalculateImc extends AppCompatActivity {
         EditText resultBM = (EditText) findViewById(R.id.etValorMetabolicoBasal);
 
         Bundle recibeDatos = getIntent().getExtras();
-        if (recibeDatos != null) {
-            personArray = (ArrayList<Person>) recibeDatos.getSerializable("lista");
+        if(getIntent().getExtras().getSerializable("lista") != null){
+            personArray= (ArrayList<Person>) recibeDatos.getSerializable("lista");
+            //position = recibeDatos.getInt("position");
+
+        }
+        if(getIntent().getExtras().getSerializable("informe") != null){
+            infoPeople= (ArrayList<Informe>) recibeDatos.getSerializable("informe");
+
+        }
+
+        if(getIntent().getExtras().getSerializable("position") != null) {
             position = recibeDatos.getInt("position");
         }
 
@@ -49,6 +64,10 @@ public class CalculateImc extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                float basalMetabolism;
+                int estadoSalud=0;
+
+                String date = new SimpleDateFormat("dd-MM-yyyy  HH: mm", Locale.getDefault()).format(new Date());
                 String mensajeInicial = "Tu Indice de Masa Corporal (IMC) indica\n"  +
                                         "que tu rango es de: ";
                 String valorAltura = height.getText().toString();
@@ -58,29 +77,36 @@ public class CalculateImc extends AppCompatActivity {
                 float pesoDec = Float.parseFloat(valorPeso);
                 float edadInt = Integer.parseInt(valorEdad);
                 float resultadoDec = pesoDec / (alturaDec*alturaDec);
-                result.setText(""+resultadoDec);
+                result.setText(String.format("%.2f" , resultadoDec));
                 if (resultadoDec < 18.5 ){
+                    estadoSalud = 0;
                     observations.setText(mensajeInicial + "Peso insuficiente\n" +"Se recomienda: Realizar ejercicio moderado para mantener weight y mejorar alimentación rica en proteínas." );
                 }
-                if ((resultadoDec >= 18.5)&&(resultadoDec < 24.9)){
+                if ((resultadoDec >= 18.5)&&(resultadoDec < 25)){
+                    estadoSalud = 1;
                     observations.setText( mensajeInicial + "Peso normal o saludable\n"  +"Se recomienda: Realizar ejercicio para mantener weight y mantener alimentación balanceada"  );
                 }
-                if ((resultadoDec >= 25)&&(resultadoDec <= 29.9)){
+                if ((resultadoDec >= 25)&&(resultadoDec <30)){
+                    estadoSalud = 2;
                     observations.setText( mensajeInicial + "Sobrepeso\n" +"Se recomienda: Realizar ejercicio intenso para bajar de weight y mejorar alimentación rica en frutas y verduras"  );
                 }
                 if (resultadoDec >= 30){
+                    estadoSalud = 3;
                     observations.setText( mensajeInicial + "Obesidad\n"  +"Se recomienda: Realizar ejercicio mas intenso para bajar de weight y mejorar alimentación rica en frutas, verduras y abundante agua. "   );
                 }
                 if (female.isChecked()) {
-                   float basalMetabolism = (10 * pesoDec) + (6.25f * (alturaDec * 100)) -
+                   basalMetabolism = (10 * pesoDec) + (6.25f * (alturaDec * 100)) -
                             (5 * edadInt) - 161;
                     resultBM.setText(""+basalMetabolism);
+                    generoFemenino = true;
                 }
                 else {
-                    float basalMetabolism = (10 * pesoDec) + (6.25f * (alturaDec * 100)) -
+                    basalMetabolism = (10 * pesoDec) + (6.25f * (alturaDec * 100)) -
                            (5 * edadInt) +5;
                     resultBM.setText(""+basalMetabolism);
+                    generoFemenino = false;
                 }
+                infoPeople.add(new Informe(position, valorEdad,valorPeso, valorAltura, resultadoDec, basalMetabolism, estadoSalud, date, generoFemenino));
             }
         });
 
@@ -91,6 +117,7 @@ public class CalculateImc extends AppCompatActivity {
                 Intent intentMain = new Intent (CalculateImc.this, MainActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("lista", personArray);
+                bundle.putSerializable("informe", infoPeople);
                 intentMain.putExtras(bundle);
                 startActivity(intentMain);
                 finish();
@@ -100,7 +127,14 @@ public class CalculateImc extends AppCompatActivity {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CalculateImc.this, "Historial en construcción...", Toast.LENGTH_LONG).show();
+                //Toast.makeText(CalculoIMC.this, "Historial en construcción...", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent (CalculateImc.this, InformeActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("lista", personArray);
+                bundle.putSerializable("informe", infoPeople);
+                bundle.putInt("position", position);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }

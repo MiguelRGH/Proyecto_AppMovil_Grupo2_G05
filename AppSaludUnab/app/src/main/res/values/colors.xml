@@ -10,4 +10,11 @@
     <color name="univerisidad1">#FF9800</color>
     <color name="univerisidadClaro">#F5E9BE</color>
     <color name="blanco">#FFFFFF</color>
+    <color name="naranja">#ff7b00</color>
+    <color name="amarillo">#fdd31d</color>
+    <color name="rojo">#cc0000</color>
+    <color name="verde">#63b521</color>
+    <color name="gris">#808080</color>
+    <color name="azul">#000080</color>
+    <color name="gris_claro">#EEEEEE</color>
 </resources>

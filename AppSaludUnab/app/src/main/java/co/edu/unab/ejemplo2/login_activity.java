@@ -11,11 +11,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import co.edu.unab.ejemplo2.model.Informe;
 import co.edu.unab.ejemplo2.model.Person;
 
 public class login_activity extends AppCompatActivity {
 
     private ArrayList<Person> personArray = new ArrayList<Person>();
+    private ArrayList<Informe> infoPeople = new ArrayList<Informe>();
     boolean usuarioNoExiste = false;
 
     @Override
@@ -28,9 +30,15 @@ public class login_activity extends AppCompatActivity {
         Button botonInicio = (Button) findViewById(R.id.btnInicioSesion2);
         Bundle recibeDatos = getIntent().getExtras();
 
-        if (recibeDatos != null) {
-            personArray = (ArrayList<Person>) recibeDatos.getSerializable("lista");
-            boolean usuarioNoExiste = false;
+        if(getIntent().getExtras().getSerializable("lista") != null){
+            personArray= (ArrayList<Person>) recibeDatos.getSerializable("lista");
+            boolean usuarioNoExiste= false;
+
+        }
+
+        if(getIntent().getExtras().getSerializable("informe") != null){
+            infoPeople= (ArrayList<Informe>) recibeDatos.getSerializable("informe");
+
         }
 
         botonInicio.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +59,7 @@ public class login_activity extends AppCompatActivity {
                             Intent intent2 = new Intent(login_activity.this, CalculateImc.class);
                             Bundle bundle = new Bundle();
                             bundle.putSerializable("lista", personArray);
+                            bundle.putSerializable("informe", infoPeople);
                             bundle.putInt("position", i);
                             intent2.putExtras(bundle);
                             startActivity(intent2);

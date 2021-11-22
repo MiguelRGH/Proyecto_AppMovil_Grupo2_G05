@@ -72,7 +72,7 @@
                 <TextView
                     android:id="@+id/etTituloMetabolicoBasa"
                     android:layout_width="175dp"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/stylo_borde_superior"
                     android:backgroundTint="@color/univerisidad1"
                     android:ems="10"
@@ -356,7 +356,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:shadowRadius="@integer/material_motion_duration_long_1"
-            android:text="Regresar"
+            android:text="Salir"
             android:textAllCaps="false"
             android:textColor="@color/univerisidad1"
             android:textSize="25sp"
