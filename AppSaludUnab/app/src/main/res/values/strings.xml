@@ -17,4 +17,11 @@
     <string name="send">Enviar</string>
     <string name="login">INICIAR SESIÓN</string>
     <string name="register">Registrate</string>
+    <string name="yourImc">Tu IMC</string>
+    <string name="basalMetabolism">Tu metabolisma basal es</string>
+    <string name="weight">Peso</string>
+    <string name="weight_hint">en kilogramos</string>
+    <string name="height">Altura</string>
+
+>>>>>>> 458c22a7b598f84d6ff747dc9ea0d4872a530c32
 </resources>
