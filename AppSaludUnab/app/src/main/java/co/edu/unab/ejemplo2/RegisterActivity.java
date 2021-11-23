@@ -33,12 +33,12 @@ public class RegisterActivity extends AppCompatActivity {
 
         Bundle receiveData = getIntent().getExtras();
 
-        if(getIntent().getExtras().getSerializable("lista") != null){
-            personArray= (ArrayList<Person>) receiveData.getSerializable("lista");
+        if (getIntent().getExtras().getSerializable("lista") != null) {
+            personArray = (ArrayList<Person>) receiveData.getSerializable("lista");
 
         }
-        if(getIntent().getExtras().getSerializable("informe") != null){
-            infoPeople= (ArrayList<Informe>) receiveData.getSerializable("informe");
+        if (getIntent().getExtras().getSerializable("informe") != null) {
+            infoPeople = (ArrayList<Informe>) receiveData.getSerializable("informe");
 
         }
 
@@ -50,15 +50,21 @@ public class RegisterActivity extends AppCompatActivity {
                 String idPerson = id.getText().toString();
                 String emailPerson = email.getText().toString();
                 String passwordPerson = password.getText().toString();
-                personArray.add(new Person(namePerson, lastNamePerson, idPerson, emailPerson, passwordPerson));
-                Toast.makeText(RegisterActivity.this, "Registro correcto", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(RegisterActivity.this, login_activity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("lista", personArray);
-                bundle.putSerializable("informe", infoPeople);
-                intent.putExtras(bundle);
-                startActivity(intent);
-                finish();
+                if (namePerson.equals("") || lastNamePerson.equals("") || idPerson.equals("") ||
+                        emailPerson.equals("") || passwordPerson.equals("")) {
+                    personArray.add(new Person(namePerson, lastNamePerson, idPerson, emailPerson, passwordPerson));
+                    Toast.makeText(RegisterActivity.this, "Registro correcto", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(RegisterActivity.this, login_activity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("lista", personArray);
+                    bundle.putSerializable("informe", infoPeople);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(RegisterActivity.this, "No se permiten campos vacios. Intente nuevamente",
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
