@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2.5"
+        android:layout_height="0sp"
+        android:layout_weight="0.5"
         android:orientation="vertical">
 
     </LinearLayout>
@@ -38,31 +38,30 @@
                 android:background="@drawable/stylo_borde_izq"
                 android:backgroundTint="@color/univerisidad1"
                 android:gravity="center"
-                android:text="@string/id"
+                android:text="ID"
+                android:textSize="20dp"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:ignore="TextContrastCheck" />
+                />
+
 
             <EditText
-                android:id="@+id/etUserIdentificacion"
+                android:id="@+id/etUserEmail"
                 android:layout_width="270dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_margin="0dp"
                 android:background="@drawable/stylo_borde_derecho"
+
                 android:ems="10"
-                android:hint="@string/id_hint"
-                android:inputType="number"
+                android:hint=" E-mail"
+                android:inputType="textEmailAddress"
                 android:shadowRadius="@integer/material_motion_duration_long_1"
-                android:textColor="@color/univerisidad1"
-                tools:ignore="TextContrastCheck"
-                android:importantForAutofill="no" />
-
+                android:textColor="@color/univerisidad1" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="350dp"
             android:layout_height="80dp"
+
             android:layout_gravity="center"
             android:orientation="horizontal"
             >
@@ -75,10 +74,10 @@
                 android:background="@drawable/stylo_borde_izq"
                 android:backgroundTint="@color/univerisidad1"
                 android:gravity="center"
-                android:text="@string/password"
+                android:text="CLAVE"
+                android:textSize="20dp"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:ignore="TextContrastCheck" />
+                />
 
 
             <EditText
@@ -88,33 +87,105 @@
                 android:layout_gravity="center"
                 android:layout_margin="0dp"
                 android:background="@drawable/stylo_borde_derecho"
+
                 android:ems="10"
-                android:hint="@string/password_hint"
+                android:hint=" Escriba su clave"
                 android:inputType="textPassword"
                 android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:textColor="@color/univerisidad1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/btnIniciarSesion"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:padding="5dp"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:text="Iniciar sesión"
+                android:textAllCaps="false"
                 android:textColor="@color/univerisidad1"
-                tools:ignore="TextContrastCheck"
-                android:importantForAutofill="no" />
+                android:textSize="25sp"
+                app:cornerRadius="200dp" />
+
+            <Button
+                android:id="@+id/btnRegistrarme"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/univerisidad1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:text="Registrarme"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                app:cornerRadius="200dp" />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            >
 
-        <Button
-            android:id="@+id/btnInicioSesion2"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:backgroundTint="#FFFFFF"
-            android:gravity="center"
-            android:padding="5dp"
-            android:shadowRadius="@integer/material_motion_duration_long_1"
-            android:text="@string/login"
-            android:textAllCaps="false"
-            android:textColor="@color/univerisidad1"
-            android:textSize="25sp"
-            app:cornerRadius="200dp"
-            tools:ignore="TextContrastCheck" />
+            <Button
+                android:id="@+id/btnInicioSesionGoogle"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center"
+                android:padding="5dp"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:text="Login con Google"
+                android:textAllCaps="false"
+                android:textColor="@color/univerisidad1"
+                android:textSize="25sp"
+                app:cornerRadius="200dp" />
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/univerisidad1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:text="Cerrar sesión"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                app:cornerRadius="200dp" />
+
+            <TextView
+                android:id="@+id/tvRecuperarClave"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Recuperar contraseña"
+                android:gravity="center"
+                android:textColor="@color/univerisidad1"
+                android:textSize="20sp">
+
+            </TextView>
+        </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>

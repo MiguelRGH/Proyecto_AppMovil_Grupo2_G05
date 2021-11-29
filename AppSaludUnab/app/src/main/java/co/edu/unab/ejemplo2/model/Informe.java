@@ -1,9 +1,10 @@
 package co.edu.unab.ejemplo2.model;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 public class Informe implements Serializable {
-    int id;
+    String email;
     String edad;
     String peso;
     String altura;
@@ -13,12 +14,12 @@ public class Informe implements Serializable {
     String fecha;
     boolean genero;
 
-    public Informe(){
+    public Informe() {
 
     }
 
-    public Informe(int id, String edad, String peso, String altura, Float imc, float mBasal, int estadoSalud, String fecha, boolean genero) {
-        this.id = id;
+    public Informe(String email, String edad, String peso, String altura, float imc, float mBasal, int estadoSalud, String fecha, boolean genero) {
+        this.email = email;
         this.edad = edad;
         this.peso = peso;
         this.altura = altura;
@@ -29,12 +30,12 @@ public class Informe implements Serializable {
         this.genero = genero;
     }
 
-    public int getId() {
-        return id;
+    public String getEmail() {
+        return email;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getEdad() {
@@ -61,15 +62,15 @@ public class Informe implements Serializable {
         this.altura = altura;
     }
 
-    public Float getImc() {
+    public float getImc() {
         return imc;
     }
 
-    public void setImc(Float imc) {
+    public void setImc(float imc) {
         this.imc = imc;
     }
 
-    public Float getmBasal() {
+    public float getmBasal() {
         return mBasal;
     }
 
@@ -99,5 +100,20 @@ public class Informe implements Serializable {
 
     public void setGenero(boolean genero) {
         this.genero = genero;
+    }
+
+    public HashMap<String, Object> getMapa() {
+        HashMap<String, Object> mapaResultado = new HashMap<String, Object>();
+        mapaResultado.put("email", getEmail());
+        mapaResultado.put("edad", getEdad());
+        mapaResultado.put("peso", getPeso());
+        mapaResultado.put("altura", getAltura());
+        mapaResultado.put("imc", getImc());
+        mapaResultado.put("m_basal", getmBasal());
+        mapaResultado.put("estadoSalud", getEstadoSalud());
+        mapaResultado.put("fecha", getFecha());
+        mapaResultado.put("genero", getGenero());
+
+        return mapaResultado;
     }
 }

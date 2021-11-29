@@ -86,11 +86,8 @@ android:gravity="center"
             android:layout_weight="1"
             android:background="@drawable/down_arrow_14"
 
+
             />
-
-
-
-
 
     </LinearLayout>
     <LinearLayout

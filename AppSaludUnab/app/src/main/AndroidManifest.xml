@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejemplo2">
         <activity
+            android:name=".ReportAllActivity"
+            android:exported="false" />
+        <activity
             android:name=".InformeActivity"
             android:exported="false" />
         <activity

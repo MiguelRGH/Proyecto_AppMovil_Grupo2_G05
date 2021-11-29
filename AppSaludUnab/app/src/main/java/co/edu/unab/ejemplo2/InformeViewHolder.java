@@ -69,7 +69,6 @@ public class InformeViewHolder extends RecyclerView.ViewHolder {
         return estadoSalud;
     }
 
-
     public TextView getConsecutivo() {
         return consecutivo;
     }

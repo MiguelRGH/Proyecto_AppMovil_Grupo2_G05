@@ -3,23 +3,23 @@ package co.edu.unab.ejemplo2.model;
 import java.io.Serializable;
 import java.util.HashMap;
 
-public class Person implements Serializable {
+public class DatosPerson implements Serializable {
     String name;
     String lastName;
-    String id;
     String email;
-    String password;
+    //int cantidadRegistros;
 
-    public Person() {
+
+    public DatosPerson() {
 
     }
 
-    public Person(String name, String lastName, String id, String email, String password) {
+    public DatosPerson(String name, String lastName, String email) {
         this.name = name;
         this.lastName = lastName;
-        this.id = id;
+        //this.cantidadRegistros = cantidadRegistros;
         this.email = email;
-        this.password = password;
+
     }
 
     public String getName() {
@@ -38,13 +38,6 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getEmail() {
         return email;
@@ -53,23 +46,27 @@ public class Person implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+    /*
 
-    public String getPassword() {
-        return password;
+    public int getCantidadRegistros() {
+        return cantidadRegistros;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setCantidadRegistros(int cantidadRegistros) {
+        this.cantidadRegistros = cantidadRegistros;
     }
+
+     */
 
     public HashMap<String, Object> getMapa() {
         HashMap<String, Object> mapaResultado = new HashMap<String, Object>();
         mapaResultado.put("nombre", getName());
         mapaResultado.put("apellido", getLastName());
-        mapaResultado.put("id", getId());
         mapaResultado.put("correo", getEmail());
-        mapaResultado.put("clave", getPassword());
+        //mapaResultado.put("cantidadRegistros", getCantidadRegistros());
+
 
         return mapaResultado;
     }
 }
+

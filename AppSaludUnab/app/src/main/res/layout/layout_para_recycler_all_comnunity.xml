@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iVImagenInicio"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                app:civ_border_width="1dp"
+                android:src="@drawable/user_purple"
+                app:civ_border_color="@color/gris_claro"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="Fernando "
+                    android:textColor="@color/azul"/>
+
+                <TextView
+                    android:id="@+id/tvApellido"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="Carrillo"
+                    android:textColor="@color/azul"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:text="correo@unab.edu.co"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <ImageButton
+                android:id="@+id/btnRegisterFinal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/go"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Registros"
+                android:textSize="10dp"
+
+                android:textColor="@color/azul"
+
+
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

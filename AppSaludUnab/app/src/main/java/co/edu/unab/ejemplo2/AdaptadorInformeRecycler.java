@@ -19,8 +19,7 @@ public class AdaptadorInformeRecycler extends RecyclerView.Adapter<InformeViewHo
     private int layoutSeleccionado;
 
 
-
-    public AdaptadorInformeRecycler(Context contexto,   int layoutSeleccionado,ArrayList<Informe> listaDatos) {
+    public AdaptadorInformeRecycler(Context contexto, int layoutSeleccionado, ArrayList<Informe> listaDatos) {
         this.contexto = contexto;
         this.listaDatos = listaDatos;
         this.layoutSeleccionado = layoutSeleccionado;
@@ -42,23 +41,23 @@ public class AdaptadorInformeRecycler extends RecyclerView.Adapter<InformeViewHo
         String peso = listaDatos.get(position).getPeso();
         String edad = listaDatos.get(position).getEdad();
         String altura = listaDatos.get(position).getAltura();
-        Float imc= listaDatos.get(position).getImc();
+        Float imc = listaDatos.get(position).getImc();
         Float basal = listaDatos.get(position).getmBasal();
         Boolean genero = listaDatos.get(position).getGenero();
-        Integer estadoSalud= listaDatos.get(position).getEstadoSalud();
-        holder.getPeso().setText("Peso: "+ peso + " Kg");
-        holder.getEdad().setText("Edad: "+edad+" años");
-        holder.getAltura().setText("Altura: "+altura+" mts");
-        holder.getMb().setText("M. Basal: "+ basal);
-        holder.getGenero().setText(""+((genero == true) ? "Femenino" : "Masculino"));
+        Integer estadoSalud = listaDatos.get(position).getEstadoSalud();
+        holder.getPeso().setText("Peso: " + peso + " Kg");
+        holder.getEdad().setText("Edad: " + edad + " años");
+        holder.getAltura().setText("Altura: " + altura + " mts");
+        holder.getMb().setText("M. Basal: " + basal);
+        holder.getGenero().setText("" + ((genero == true) ? "Femenino" : "Masculino"));
 
         holder.getFlechaBoton().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(holder.getLayoutSecundario().getVisibility() == View.GONE){
+                if (holder.getLayoutSecundario().getVisibility() == View.GONE) {
                     holder.getLayoutSecundario().setVisibility(View.VISIBLE);
-                }else holder.getLayoutSecundario().setVisibility(View.GONE);
+                } else holder.getLayoutSecundario().setVisibility(View.GONE);
 
 
             }
@@ -67,14 +66,18 @@ public class AdaptadorInformeRecycler extends RecyclerView.Adapter<InformeViewHo
 
         holder.getEstadoSalud().setText("" + ((estadoSalud == 0) ? "Peso insuficiente" : (estadoSalud == 1) ? "Saludable" : (estadoSalud == 2) ? "Sobrepeso" : "Obesidad"));
 
-        if (estadoSalud == 0)  holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_amarillo));
-        if (estadoSalud == 1)  holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_verde));
-        if (estadoSalud == 2)  holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_naranja));
-        if (estadoSalud == 3)  holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_rojo));
+        if (estadoSalud == 0)
+            holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_amarillo));
+        if (estadoSalud == 1)
+            holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_verde));
+        if (estadoSalud == 2)
+            holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_naranja));
+        if (estadoSalud == 3)
+            holder.getBandera().setBackground(this.contexto.getDrawable(R.drawable.stylo_borde_izq_rojo));
 
-        holder.getImc().setText(String.format("Tu IMC: %.2f" , imc ));
-        holder.getConsecutivo().setText("Registro No." + (position+1));
-        holder.getFecha1().setText(""+fecha);
+        holder.getImc().setText(String.format("Tu IMC: %.2f", imc));
+        holder.getConsecutivo().setText("Registro No." + (position + 1));
+        holder.getFecha1().setText("" + fecha);
 
     }
 

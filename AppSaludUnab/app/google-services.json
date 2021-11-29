@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "8805879030",
+    "project_id": "ejemplousofirebase-7e40c",
+    "storage_bucket": "ejemplousofirebase-7e40c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8805879030:android:14dd14ae2eae0e968630d7",
+        "android_client_info": {
+          "package_name": "co.edu.unab.ejemplo2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8805879030-vub62i949rck6dndue5iqkda4eadjie8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.unab.ejemplo2",
+            "certificate_hash": "9966b376dc4d5c28ff742e045511d2a096994b7d"
+          }
+        },
+        {
+          "client_id": "8805879030-1q6qn7t57ejncmj35usvi8jsccrrukkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVjo-i9MhXUP6nueVIxfDRv7RTJ9KOVc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8805879030-1q6qn7t57ejncmj35usvi8jsccrrukkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8805879030:android:a8c5a2378714011f8630d7",
+        "android_client_info": {
+          "package_name": "co.edu.unab.ejemploconexionfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8805879030-1q6qn7t57ejncmj35usvi8jsccrrukkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVjo-i9MhXUP6nueVIxfDRv7RTJ9KOVc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8805879030-1q6qn7t57ejncmj35usvi8jsccrrukkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8805879030:android:53dd257e40b0bd378630d7",
+        "android_client_info": {
+          "package_name": "co.edu.unab.pruebasautenticacion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8805879030-qksnfiooagoh7n0bl6p588uevsutf5tg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.unab.pruebasautenticacion",
+            "certificate_hash": "9966b376dc4d5c28ff742e045511d2a096994b7d"
+          }
+        },
+        {
+          "client_id": "8805879030-1q6qn7t57ejncmj35usvi8jsccrrukkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVjo-i9MhXUP6nueVIxfDRv7RTJ9KOVc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8805879030-1q6qn7t57ejncmj35usvi8jsccrrukkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
