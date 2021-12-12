@@ -54,57 +54,63 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                 try {
+                    if (clavePerson.length() >= 6) {
+                        if (!nombrePerson.isEmpty() && !apellidoPerson.isEmpty() && !idPerson.isEmpty() && !emailPerson.isEmpty() && !clavePerson.isEmpty()) {
 
-                    if (!nombrePerson.isEmpty() && !apellidoPerson.isEmpty() && !idPerson.isEmpty() && !emailPerson.isEmpty() && !clavePerson.isEmpty()) {
+                            Person persona = new Person(nombrePerson, apellidoPerson, idPerson, emailPerson, clavePerson);
+                            repository = new PersonaRepositoryImpl();
 
-                        Person persona = new Person(nombrePerson, apellidoPerson, idPerson, emailPerson, clavePerson);
-                        repository = new PersonaRepositoryImpl();
+                            repository.findById(idPerson, new Callback() {
 
-                        repository.findById(idPerson, new Callback() {
+                                @Override
+                                public void onSuccess(Object object) {
 
-                            @Override
-                            public void onSuccess(Object object) {
+                                    if (object.equals(true)) {
+                                        Toast.makeText(RegisterActivity.this, "Registro NO exitoso debido a que el ID ya existe, por favor inicie sesión con su ID", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        repository.create(persona, new Callback() {
+                                            @Override
+                                            public void onSuccess(Object object) {
+                                                Log.d(" MSJ:", "Persona creada");
+                                                createAccount(emailPerson, clavePerson);
+                                                Toast.makeText(RegisterActivity.this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
 
-                                if (object.equals(true)) {
-                                    Toast.makeText(RegisterActivity.this, "Registro NO exitoso debido a que el ID ya existe, por favor inicie sesión con su ID", Toast.LENGTH_LONG).show();
-                                } else {
-                                    repository.create(persona, new Callback() {
-                                        @Override
-                                        public void onSuccess(Object object) {
-                                            Log.d(" MSJ:", "Persona creada");
-                                            createAccount(emailPerson, clavePerson);
-                                            Toast.makeText(RegisterActivity.this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                                            }
 
-                                        }
+                                            @Override
+                                            public void onFailure(Object object) {
+                                                Log.d(" MSJ:", "Persona NO creada");
+                                            }
+                                        });
+                                    }
 
-                                        @Override
-                                        public void onFailure(Object object) {
-                                            Log.d(" MSJ:", "Persona NO creada");
-                                        }
-                                    });
+                                    Intent intent = new Intent(RegisterActivity.this, login_activity.class);
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("email", emailPerson);
+                                    bundle.putString("clave", clavePerson);
+                                    intent.putExtras(bundle);
+                                    startActivity(intent);
+                                    finish();
+
+
                                 }
 
-                                Intent intent = new Intent(RegisterActivity.this, login_activity.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString("email", emailPerson);
-                                bundle.putString("clave", clavePerson);
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                                finish();
+                                @Override
+                                public void onFailure(Object object) {
+                                    Toast.makeText(RegisterActivity.this, "Busqueda NO completada", Toast.LENGTH_LONG).show();
 
+                                }
+                            });
+                        } else {
+                            Toast.makeText(RegisterActivity.this, "Por favor ingrese todos los datos solicitados", Toast.LENGTH_LONG).show();
 
-                            }
+                        }
 
-                            @Override
-                            public void onFailure(Object object) {
-                                Toast.makeText(RegisterActivity.this, "Busqueda NO completada", Toast.LENGTH_LONG).show();
-
-                            }
-                        });
-                    } else {
-                        Toast.makeText(RegisterActivity.this, "Por favor ingrese todos los datos solicitados", Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(RegisterActivity.this, "No es posible crear el usuario por que la clave debe tener 6 o mas digitos", Toast.LENGTH_LONG).show();
 
                     }
+
 
                 } catch (Exception e) {
 

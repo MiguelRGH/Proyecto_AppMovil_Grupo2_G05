@@ -49,6 +49,7 @@ public class CalculateImc extends AppCompatActivity {
         TextView result = (TextView) findViewById(R.id.etValorIMC);
         Button back = (Button) findViewById(R.id.btnRegresar);
         Button history = (Button) findViewById(R.id.btnHistorial);
+        Button mapa = (Button) findViewById(R.id.btnMapa);
         RadioButton female = findViewById(R.id.femaleRadioButton);
         RadioButton male = findViewById(R.id.maleRadioButton);
         EditText resultBM = (EditText) findViewById(R.id.etValorMetabolicoBasal);
@@ -167,6 +168,15 @@ public class CalculateImc extends AppCompatActivity {
                 Intent intent = new Intent(CalculateImc.this, InformeActivity.class);
 
                 startActivity(intent);
+            }
+        });
+        mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalculateImc.this, LocationActivity.class);
+
+                startActivity(intent);
+
             }
         });
     }

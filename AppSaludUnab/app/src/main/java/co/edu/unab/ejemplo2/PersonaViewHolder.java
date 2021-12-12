@@ -17,6 +17,7 @@ public class PersonaViewHolder extends RecyclerView.ViewHolder {
     private final TextView emailViewHolder;
     private final CircleImageView userImageViewHolder;
     private final ImageButton buttonRegistros;
+    private final ImageButton buttonLocalizaciones;
 
     public PersonaViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -25,6 +26,7 @@ public class PersonaViewHolder extends RecyclerView.ViewHolder {
         emailViewHolder = (TextView) itemView.findViewById(R.id.tvEmail);
         userImageViewHolder = (CircleImageView) itemView.findViewById(R.id.iVImagenInicio);
         buttonRegistros = (ImageButton) itemView.findViewById(R.id.btnRegisterFinal);
+        buttonLocalizaciones = (ImageButton) itemView.findViewById(R.id.btnLocalizaciones);
 
     }
 
@@ -46,5 +48,9 @@ public class PersonaViewHolder extends RecyclerView.ViewHolder {
 
     public ImageButton getButtonRegistros() {
         return buttonRegistros;
+    }
+
+    public ImageButton getButtonLocalizaciones() {
+        return buttonLocalizaciones;
     }
 }

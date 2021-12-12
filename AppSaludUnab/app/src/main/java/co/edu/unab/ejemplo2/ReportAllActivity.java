@@ -69,7 +69,7 @@ public class ReportAllActivity extends AppCompatActivity {
                     String emailUser = objectSnapshot.getDocuments().get(i).getString("correo");
                     allCommunity.add(new DatosPerson(name, lastName, emailUser));
 
-                    /*
+
                     repository2 = new InformeRepositoryImpl();
                     repository2.findAll(new Callback() {
                         @Override
@@ -95,9 +95,10 @@ public class ReportAllActivity extends AppCompatActivity {
 
                         }
 
+
                     });
 
-                     */
+
 
 
                 }

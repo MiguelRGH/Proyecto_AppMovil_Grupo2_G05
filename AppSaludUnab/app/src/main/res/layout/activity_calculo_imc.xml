@@ -348,22 +348,37 @@
 
         <Button
             android:id="@+id/btnRegresar"
-            android:layout_width="180dp"
+            android:layout_width="90dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:backgroundTint="@color/univerisidadClaro"
             android:gravity="center"
             android:padding="5dp"
-            android:shadowRadius="@integer/material_motion_duration_long_1"
+            android:shadowRadius="@android:integer/config_longAnimTime"
             android:text="Salir"
             android:textAllCaps="false"
             android:textColor="@color/univerisidad1"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:cornerRadius="200dp" />
 
         <Button
             android:id="@+id/btnHistorial"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/univerisidadClaro"
+            android:gravity="center"
+            android:padding="5dp"
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:text="Historial"
+            android:textAllCaps="false"
+            android:textColor="@color/univerisidad1"
+            android:textSize="20sp"
+            app:cornerRadius="200dp" />
+        <Button
+            android:id="@+id/btnMapa"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -371,11 +386,11 @@
             android:backgroundTint="@color/univerisidadClaro"
             android:gravity="center"
             android:padding="5dp"
-            android:shadowRadius="@integer/material_motion_duration_long_1"
-            android:text="Historial"
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:text="Localizaciones"
             android:textAllCaps="false"
             android:textColor="@color/univerisidad1"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:cornerRadius="200dp" />
     </LinearLayout>
 

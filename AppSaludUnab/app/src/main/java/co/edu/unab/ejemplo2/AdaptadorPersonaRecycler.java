@@ -112,6 +112,18 @@ public class AdaptadorPersonaRecycler extends RecyclerView.Adapter<PersonaViewHo
             }
         });
 
+        holder.getButtonLocalizaciones().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(contexto, LocationActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("email", email);
+                intent.putExtras(bundle);
+                contexto.startActivity(intent);
+
+            }
+        });
+
 
     }
 

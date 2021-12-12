@@ -2,8 +2,12 @@ package co.edu.unab.ejemplo2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +20,11 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthCredential;
@@ -28,6 +36,10 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 
 import java.util.Objects;
 
+import co.edu.unab.ejemplo2.model.Localizacion;
+import co.edu.unab.ejemplo2.repository.LocalizacionRepository;
+import co.edu.unab.ejemplo2.repository.LocalizacionRepositoryImpl;
+
 public class login_activity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
@@ -35,6 +47,9 @@ public class login_activity extends AppCompatActivity {
     private final int RC_SIGN_IN = 1;
     private String emailUser;
     private String passwordUser;
+    private FusedLocationProviderClient fusedLocationClient;
+    private LatLng punto;
+    LocalizacionRepository repository;
 
 
     @Override
@@ -48,6 +63,22 @@ public class login_activity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            return;
+        }
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        if (location != null) {
+                            punto = new LatLng(location.getLatitude(), location.getLongitude());
+
+                        }
+                    }
+                });
 
         GoogleSignInOptions gso = new GoogleSignInOptions
                 .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -92,12 +123,17 @@ public class login_activity extends AppCompatActivity {
 
             }
         });
+        registro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(login_activity.this, RegisterActivity.class);
+                startActivity(intent1);
+            }
+        });
 
     }
 
     private void SignWithFirebase(String email, String password) {
-
-
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -114,6 +150,23 @@ public class login_activity extends AppCompatActivity {
                                 startActivity(intent);
 
                             } else {
+                                Localizacion localizacion = new Localizacion(email, punto.latitude, punto.longitude);
+
+                                repository = new LocalizacionRepositoryImpl();
+
+                                repository.createWithoutID(localizacion, new Callback() {
+                                    @Override
+                                    public void onSuccess(Object object) {
+                                        Toast.makeText(login_activity.this, "Localizacion creada en FB", Toast.LENGTH_SHORT).show();
+
+                                    }
+
+                                    @Override
+                                    public void onFailure(Object object) {
+
+                                    }
+                                });
+
                                 Intent intent = new Intent(login_activity.this, CalculateImc.class);
                                 startActivity(intent);
                             }

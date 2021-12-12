@@ -73,6 +73,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+
             >
 
 
@@ -97,12 +99,45 @@
                 />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            >
+
+
+            <ImageButton
+                android:id="@+id/btnLocalizaciones"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ubication"
 
 
 
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Localizaciones"
+                android:textSize="10dp"
 
+                android:textColor="@color/azul"
+
+
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/user_grisclaro"
+        />
 
 
 </LinearLayout>
