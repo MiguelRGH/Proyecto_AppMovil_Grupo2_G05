@@ -1,0 +1,12 @@
+Proyecto_AppMovil_Grupo2_G05
+
+*Registro para usuarios de la comunidad universitaria 
+
+  Realizar registro ingresando un id de usuario y una clave de acceso
+
+*Acceso como usuario de Bienestar Universitario: Se debe realizar el registro con los siguientes datos
+
+  - Usuario:bienestar@unab.edu.co
+  - Clave: asignar clave de acceso
+
+  
